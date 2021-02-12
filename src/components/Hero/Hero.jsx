@@ -1,16 +1,10 @@
-import React, {useContext, useState, useEffect} from 'react';
+import React, { useState, useEffect} from 'react';
 import {Container} from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
-import {Link} from 'react-scroll';
-import PortfolioContext from '../../context/context';
+import {nanoid} from "nanoid";
 
 
 const Header = () => {
-    const {hero} = useContext(PortfolioContext);
-    const {title, name, subtitle, cta} = hero;
-
-    const {footer} = useContext(PortfolioContext);
-    const {networks} = footer;
 
     const [isDesktop, setIsDesktop] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
@@ -71,21 +65,25 @@ const Header = () => {
                         <div className="footer-div">
 
                             <div className="social-links">
-                                {networks &&
-                                networks.map((network) => {
-                                    const {id, name, url} = network;
-                                    return (
-                                        <a
-                                            key={id}
-                                            href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                            aria-label={name}
-                                        >
-                                            <i className={`fa fa-${name || 'refresh'} fa-inverse `}/>
-                                        </a>
-                                    );
-                                })}
+                                <a
+                                    key={nanoid()}
+                                    href={"https://www.linkedin.com/in/kais-bettaieb/"}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                    aria-label={"linkedin"}
+                                >
+                                    <i className={`fa fa-linkedin fa-inverse`}/>
+                                </a>
+
+                                <a
+                                    key={nanoid()}
+                                    href={'https://github.com/kaisbettaieb'}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                    aria-label={"github"}
+                                >
+                                    <i className={`fa fa-github fa-inverse`}/>
+                                </a>
                             </div>
                             <hr/>
                             <p className="footer__text">

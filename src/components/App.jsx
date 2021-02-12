@@ -3,19 +3,12 @@ import Hero from './Hero/Hero';
 
 import { PortfolioProvider } from '../context/context';
 
-import { heroData,  footerData } from '../mock/data';
 
 function App() {
   const [hero, setHero] = useState({});
-  const [footer, setFooter] = useState({});
-
-  useEffect(() => {
-    setHero({ ...heroData });
-    setFooter({ ...footerData });
-  }, []);
 
   return (
-    <PortfolioProvider value={{ hero, footer }}>
+    <PortfolioProvider value={{ hero }}>
       <Hero />
     </PortfolioProvider>
   );

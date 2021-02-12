@@ -4,7 +4,7 @@ import App from '../components/App';
 import { headData } from '../mock/data';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
-
+import '../style/vendor/css/font-awesome.min.css'
 export default () => {
   const { title, lang, description } = headData;
 
