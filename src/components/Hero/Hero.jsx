@@ -27,7 +27,7 @@ const Header = () => {
                         Hello my name is
                         <span className="text-color-main"> Kais BETTAIEB </span>
                         <br/>
-                        I'm a Python web developer Developer
+                        I'm a Python web developer
                     </h1>
                 </Fade>
 
